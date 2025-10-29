@@ -1,0 +1,59 @@
+Valuation method: Discounted Cash Flow (DCF) using projected revenues and a Gordon Growth terminal value.
+
+Inputs summary:
+{
+  "current_revenue": 100000000.0,
+  "revenue_growth_rates": [
+    0.2,
+    0.15,
+    0.12,
+    0.1,
+    0.08
+  ],
+  "profit_margin": 0.18,
+  "tax_rate": 0.25,
+  "reinvestment_rate": 0.2,
+  "discount_rate": 0.1,
+  "terminal_growth_rate": 0.03,
+  "forecast_periods": 5
+}
+
+Step 1 � Revenue projections:
+ Year 1: applied growth 20.00% to previous revenue. Projected revenue = 120,000,000.00.
+ Year 2: applied growth 15.00% to previous revenue. Projected revenue = 138,000,000.00.
+ Year 3: applied growth 12.00% to previous revenue. Projected revenue = 154,560,000.00.
+ Year 4: applied growth 10.00% to previous revenue. Projected revenue = 170,016,000.00.
+ Year 5: applied growth 8.00% to previous revenue. Projected revenue = 183,617,280.00.
+
+Step 2 � Free Cash Flow (FCF) projections:
+ We calculate FCF as: FCF = Revenue � profit_margin � (1 - reinvestment_rate).
+ Year 1: FCF = 120,000,000.00 � 18.00% � (1 - 20.00%) = 17,280,000.00.
+ Year 2: FCF = 138,000,000.00 � 18.00% � (1 - 20.00%) = 19,872,000.00.
+ Year 3: FCF = 154,560,000.00 � 18.00% � (1 - 20.00%) = 22,256,640.00.
+ Year 4: FCF = 170,016,000.00 � 18.00% � (1 - 20.00%) = 24,482,304.00.
+ Year 5: FCF = 183,617,280.00 � 18.00% � (1 - 20.00%) = 26,440,888.32.
+
+Step 3 � Discount projected FCFs:
+ We discount each year's FCF to present value using discount rate = 10.00% (PV = FCF / (1+rate)^t).
+ Year 1: Discounted FCF = 17,280,000.00 / (1 + 10.00%)^1 = 15,709,090.91.
+ Year 2: Discounted FCF = 19,872,000.00 / (1 + 10.00%)^2 = 16,423,140.50.
+ Year 3: Discounted FCF = 22,256,640.00 / (1 + 10.00%)^3 = 16,721,743.05.
+ Year 4: Discounted FCF = 24,482,304.00 / (1 + 10.00%)^4 = 16,721,743.05.
+ Year 5: Discounted FCF = 26,440,888.32 / (1 + 10.00%)^5 = 16,417,711.36.
+
+Step 4 � Terminal value (Gordon Growth):
+ We estimate a terminal value at the end of the explicit forecast using the Gordon Growth model:
+ TV = Last projected FCF � (1 + terminal_growth) / (discount_rate - terminal_growth)
+ Last FCF = 26,440,888.32; terminal growth = 3.00%; discount rate = 10.00%.
+ Terminal Value (undiscounted) = 389,058,785.28.
+ Discounted terminal value (PV) to today = 241,574,895.70.
+
+Step 5 � Enterprise value:
+ Sum discounted FCFs + PV of terminal value = Enterprise Value (EV).
+ Sum discounted FCFs = 81,993,428.86.
+ PV(Terminal Value) = 241,574,895.70.
+ Enterprise Value = 323,568,324.57.
+
+Notes and caveats:
+ - This is a simplified DCF designed for clear explanations. In practice you may model NOPAT, depreciation, changes in working capital, and capex separately.
+ - Terminal value is sensitive to terminal_growth and discount_rate; ensure terminal_growth < discount_rate and choose economically plausible growth.
