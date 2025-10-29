@@ -1,16 +1,18 @@
-🏢 ValuCompany — Transparent Valuation Reasoning System
+🏢 **ValuCompany — Transparent Valuation Reasoning System**
 
-Project Name: Valuation Reasoner
+**Project Name: Valuation Reasoner
 Developed for: ValuCompany – Financial Transparency Initiative (Hiring Assessment 5)
-Author: Kunal Sharma
+Author: Kunal Sharma**
 
-📘 Overview
+📘 **Overview**
 
-This project was developed as part of ValuCompany’s hiring assessment, where the goal was to design a transparent valuation reasoning system that not only performs accurate financial valuations but also clearly explains how each result is derived.
+The Valuation Reasoner was built to **demonstrate financial transparency and analytical reasoning for ValuCompany’s** assessment.
+It simulates how a **financial analyst** explains **every step** of a **Discounted Cash Flow (DCF)** and **Multiples-based valuation** — **combining numbers** and **narrative clarity**.
+This project showcases **both technical skills (Python, finance)** and **communication ability**, **two key traits** in **valuation** and **data analysis roles**.
 
 The system simulates a reasoning engine capable of walking through the valuation process step by step — combining quantitative finance with narrative clarity.
 
-🧮 What It Does
+🧮 **What It Does**
 
 The Valuation Reasoner script performs both:
 
@@ -20,18 +22,19 @@ Multiples-Based Valuation — Uses an exit EV/EBITDA multiple to estimate enterp
 
 It also generates a sensitivity analysis grid to show how changes in discount rate and terminal growth affect valuation results.
 
-🔍 Key Features
+**⚙️ Features Summary**
 
-Transparent, step-by-step explanation for each financial calculation
+Performs DCF Valuation with step-by-step explanations
 
-Numerical and narrative outputs for every valuation method
+Implements a Multiples (EV/EBITDA) method for cross-checking results
 
-Generates machine-readable files (.json, .csv) and human-readable reports (.txt)
+Provides automated sensitivity analysis for discount rate and growth
 
-Includes sensitivity grid for valuation robustness
+Generates both numeric results (JSON/CSV) and readable narrative reports (TXT)
 
-Fully documented with modular, extendable Python code
+100% transparent — every calculation is explained
 
+Easy to extend for real company data
 🧠 How It Works
 
 The script accepts financial assumptions (revenue, margins, growth, WACC, etc.) as inputs, then:
@@ -74,11 +77,15 @@ Provide clients with both numeric and narrative valuation reports
 
 🛠️ Technologies Used
 
-Python 3.10+
+**Skills Demonstrated**
 
-Built-in libraries: dataclasses, json, csv, math
+Financial Modeling: Built valuation logic using core DCF and multiple-based frameworks
 
-No external dependencies required
+Data Reasoning: Designed transparent, explainable output for auditability
+
+Python Development: Applied data structures, modular design, and file handling
+
+Analytical Communication: Translated complex valuation steps into plain English
 
 🚀 How to Run
 python Valuation_Reasoner.py
