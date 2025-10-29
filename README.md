@@ -35,7 +35,7 @@ Generates both numeric results (JSON/CSV) and readable narrative reports (TXT)
 100% transparent — every calculation is explained
 
 Easy to extend for real company data
-🧠 How It Works
+🧠 **How It Works**
 
 The script accepts financial assumptions (revenue, margins, growth, WACC, etc.) as inputs, then:
 
@@ -49,7 +49,7 @@ Computes an alternative valuation using the EV/EBITDA multiple approach.
 
 Produces a clear, written explanation of each computation and its rationale.
 
-📂 Output Files
+📂 **Output Files**
 
 Running the script generates the following files automatically:
 
@@ -75,7 +75,13 @@ Audit how assumptions affect enterprise value
 
 Provide clients with both numeric and narrative valuation reports
 
-🛠️ Technologies Used
+🛠️  **Technologies Used**
+
+**Python 3.10+**
+
+Built-in libraries: dataclasses, json, csv, math
+
+No external dependencies required
 
 **Skills Demonstrated**
 
@@ -87,8 +93,8 @@ Python Development: Applied data structures, modular design, and file handling
 
 Analytical Communication: Translated complex valuation steps into plain English
 
-🚀 How to Run
-python Valuation_Reasoner.py
+🚀 **How to Run**
+**python Valuation_Reasoner.py**
 
 
 All output files will be automatically generated in the project directory.
@@ -96,4 +102,4 @@ All output files will be automatically generated in the project directory.
 📄 License
 
 This project is developed solely for ValuCompany’s internal assessment and educational use.
-All rights reserved © 2025 Kunal Sharma.
+**All rights reserved © 2025 Kunal Sharma.**
